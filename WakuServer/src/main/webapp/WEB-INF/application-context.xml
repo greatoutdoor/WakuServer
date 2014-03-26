@@ -27,15 +27,15 @@
     <!--  
     <property name="configLocation" value="classpath:spms/dao/mybatis-config.xml"></property>
     -->
-    <property name="mapperLocations" value="classpath:spms/dao/*Mapper.xml"></property>
-    <property name="typeAliasesPackage" value="spms.vo"></property>
+    <property name="mapperLocations" value="classpath:waku/dao/*Mapper.xml"></property>
+    <property name="typeAliasesPackage" value="waku.vo"></property>
   </bean>
   
   <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-    <property name="basePackage" value="spms.dao" />
+    <property name="basePackage" value="waku.dao" />
   </bean>
   
-  <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/spmsdb"/>
+  <jee:jndi-lookup id="dataSource" jndi-name="java:comp/env/jdbc/wakudb"/>
   
   <!-- Annotation으로 transaction 설정하는 것을 활성화시킴 -->
   <tx:annotation-driven transaction-manager="txManager"/>

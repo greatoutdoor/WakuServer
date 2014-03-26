@@ -30,7 +30,7 @@
 		</property>
 	</bean>
 	
-	<context:component-scan base-package="spms.controls">
+	<context:component-scan base-package="waku.controls">
 	</context:component-scan>
 
   <bean class="org.springframework.web.servlet.view.ContentNegotiatingViewResolver">
@@ -78,7 +78,7 @@
 	<!-- Spring 3.1부터는 다음과 같이 설정, 단 <mvc:annotation-driven/> 태그를 선언해야 한다. --> 
 	<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
     <property name="webBindingInitializer">
-        <bean class="spms.propertyeditors.SpmsBindingInitializer" />
+        <bean class="waku.propertyeditors.SpmsBindingInitializer" />
     </property>
   </bean>
 
